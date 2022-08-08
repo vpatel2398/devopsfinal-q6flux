@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devopsq6flux
+  labels:
+    app: pages
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pages
+  template:
+    metadata:
+      labels:
+        app: pages
+    spec:
+      containers:
+        - name: myimagescontainer
+          image: n01529156/devopsfinal
